@@ -697,3 +697,14 @@ class Core(object):
         """Deletes the specified message, by id."""
         url = '{0}/{1}'.format(self.urls['fut']['ActiveMessage'], message_id)
         self.__delete__(url)
+
+    def priceband(self, asset_id = None, item_id = None):
+        """price range."""
+        if asset_id:
+            params = {'defId': asset_id}
+            url = '{0}/pricelimits'.format(self.urls['fut']['MarketData'])
+        elif item_id:
+            params = {'itemIdList': item_id}
+            url = '{0}/item/pricelimits'.format(self.urls['fut']['MarketData'])
+        rc = self.__get__(url, params=params)
+        return rc
