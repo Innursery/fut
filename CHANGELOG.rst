@@ -4,9 +4,15 @@ Changelog
 ---------
 
 
-0.1.3 (2015-10-?)
+0.1.4 (2015-10-29)
+++++++++++++++++++
+* core: fix itemParse (thanks to hunterjm #163)
+
+0.1.3 (2015-10-28)
 ++++++++++++++++++
 * core: bump clientversion for android/ios emulation
+* core: add tradeStatus (thanks to hunterjm #161)
+* exceptions: add code, reason, string to FutError
 
 0.1.2 (2015-09-28)
 ++++++++++++++++++
